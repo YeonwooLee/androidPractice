@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="sharedVM"
+            type="com.example.sharedviewmodelprac.model.SharedViewModel" />
+        <variable
+            name="chestFG"
+            type="com.example.sharedviewmodelprac.ChestFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ChestFragment">
+
+
+        <RadioGroup
+            android:id="@+id/chest_radio_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/set_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{sharedVM.chestSetList[0].toString()}"
+                android:onClick="@{()->sharedVM.setChestSet(sharedVM.chestSetList[0])}"
+                android:checked="@{sharedVM.chestSet.equals(sharedVM.chestSetList[0])}"
+                tools:text="삼세트" />
+
+            <RadioButton
+                android:id="@+id/set_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{sharedVM.chestSetList[1].toString()}"
+                android:onClick="@{()->sharedVM.setChestSet(sharedVM.chestSetList[1])}"
+                android:checked="@{sharedVM.chestSet.equals(sharedVM.chestSetList[1])}"
+                tools:text="오세트" />
+
+            <RadioButton
+                android:id="@+id/set_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{sharedVM.chestSetList[2].toString()}"
+                android:onClick="@{()->sharedVM.setChestSet(sharedVM.chestSetList[2])}"
+                android:checked="@{sharedVM.chestSet.equals(sharedVM.chestSetList[2])}"
+                tools:text="칠세트" />
+        </RadioGroup>
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:onClick="@{()->chestFG.cancel()}"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@id/go_next"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/go_next"/>
+        <Button
+            android:id="@+id/go_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+
+            android:text="다음페이지로"
+            app:layout_constraintTop_toBottomOf="@id/chest_radio_group"
+            app:layout_constraintStart_toEndOf="@id/cancel_button"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">sharedViewModelPrac</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="health_one">1번 운동 세트 수</string>
+    <string name="health_two">2번 운동 세트 수</string>
+    <string name="health_three">3번 운동 세트 수</string>
+
+    <string name="back">등운동</string>
+    <string name="chest">가슴운동</string>
+    <string name="leg">하체운동</string>
+
+    <string name="back_whole">등 총 세트 수 %d</string>
+    <string name="chest_whole">가슴 총 세트 수 %d</string>
+    <string name="leg_whole">하체 총 세트 수 %d</string>
+    <string name="whole_whole">전체 부위 총 세트 수 %d</string>
+
+    <string name="final_fragment_title">오늘의 운동 결산</string>
+    <string name="cancel">취소</string>
+
+    <string name="new_health_log">New Health Log</string>
+    <string name="health_log_detail">등 총 세트 수: %1$d\n가슴 총 세트 수: %2$d\n하체 총 세트 수: %3$d\n총 세트 수: %4$d</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/backFragment">
+
+    <fragment
+        android:id="@+id/backFragment"
+        android:name="com.example.sharedviewmodelprac.BackFragment"
+        android:label="@string/back"
+        tools:layout="@layout/fragment_back" >
+        <action
+            android:id="@+id/action_backFragment_to_chestFragment"
+            app:destination="@id/chestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chestFragment"
+        android:name="com.example.sharedviewmodelprac.ChestFragment"
+        android:label="@string/chest"
+        tools:layout="@layout/fragment_chest" >
+        <action
+            android:id="@+id/action_chestFragment_to_legFragment"
+            app:destination="@id/legFragment" />
+        <action
+            android:id="@+id/action_chestFragment_to_backFragment"
+            app:destination="@id/backFragment"
+            app:popUpTo="@id/backFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/legFragment"
+        android:name="com.example.sharedviewmodelprac.LegFragment"
+        android:label="@string/leg"
+        tools:layout="@layout/fragment_leg" >
+        <action
+            android:id="@+id/action_legFragment_to_finalFragment"
+            app:destination="@id/finalFragment" />
+        <action
+            android:id="@+id/action_legFragment_to_backFragment"
+            app:destination="@id/backFragment"
+            app:popUpTo="@id/backFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.example.sharedviewmodelprac.FinalFragment"
+        android:label="fragment_final"
+        tools:layout="@layout/fragment_final" >
+        <action
+            android:id="@+id/action_finalFragment_to_backFragment"
+            app:destination="@id/backFragment"
+            app:popUpTo="@id/backFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

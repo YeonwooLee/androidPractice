@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">viewModel_prac</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="max_count">MAX COUNT IS %d (ui update from layout)</string>
+    <string name="current_point">Current point is %d(ui update from controller)</string>
+    <string name="current_point_data_binding">Current point is %d(ui update from layout)</string>
+</resources>
